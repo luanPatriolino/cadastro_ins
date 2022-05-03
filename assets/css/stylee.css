@@ -1,0 +1,82 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    background: #FFC0CB ;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main {
+    margin-left: 300px;
+}
+
+
+img {
+    width: 15%;
+
+}
+
+h1{
+    line-height: 60px;
+}
+
+h2 {
+    font-size: 1.2rem;
+    font-weight: 540;
+    color: black;    
+}
+
+form {
+    width: 50%;
+    height: 10%;
+    display: flex;
+    flex-direction: column;
+    padding: 0.9rem;
+    margin: 1.2rem;
+    background-color: aliceblue;
+    border-radius: 10px;
+}
+
+form input {
+    margin-top: 0.4rem;
+    margin-bottom: 0.4rem;
+    padding: 1.1rem;
+    border-radius: 5px;
+    border: none;
+    box-shadow: 2px 2px 2px #0000001c;
+    
+}
+
+form label {
+    font-size: 1.1rem;
+    font-weight: 500;
+    font-style: italic;
+}
+
+.botao-enviar {
+    background-color: #FFC0CB;
+    font-size: 1.1rem;
+    color: #1C1C1C;
+}
+
+.botao-enviar:hover {
+    background-color: #CD5C5C;
+    transition: 3s all;
+    cursor: pointer;
+}
+
+p {
+    font-size: 1.1rem;
+}
+
+strong {
+    color: red;
+}

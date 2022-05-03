@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro IESB</title>
+    <link rel="stylesheet" href="./css/stylee.css">
+    <script src="js/jquery-3.6.0.min.js" type="text/javascript"></script>
+    <script src="js/jquery.mask.js" type="text/javascript"></script>
+    <script src="js/jquery.validate.min.js" type="text/javascript"></script>
+    <script src="js/additional-methods.min.js" type="text/javascript"></script>
+    <script src="js/localization/messages_pt_BR.min" type="text/javascript"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('#telefone').mask('(00) 00000-0000');
+        })
+    </script>
+    <script>
+        $(document).ready(function() {
+            $('#form-cadastro').validate({
+                rules: {
+                    nome: {
+                        required: true,
+                        maxlength:50,
+                        minlength:10,
+                        minWords: 2
+                    }, 
+                    email: {
+                        required: true,
+                        email: true
+                    }
+                }
+            })
+        })
+    </script>
+</head>
+<body>
+    <main>
+        <div class="tamanho">
+            <img src="./Img/img1.svg" alt="aluno">
+            <h1>INSCREVA-SE AGORA</h1>
+            <h2>Para confirmar seu cadastro, preencha todos os campos abaixo.</h2>
+            <form method="post" id="form-cadastro" action="adicionatb.php">
+             <label for="nome">Nome</label>   
+             <input type="text" name="nome" id="nome" placeholder="Nome completo" required>
+             <label for="email">E-mail</label>        
+             <input type="email" name="email" id="email" placeholder="E-mail" required> 
+             <label for="telefone">Telefone</label>       
+             <input type="tel" name="telefone" id="telefone" placeholder="(xx)xxxxxxxxx" required> 
+             <label for="cpf">CPF</label>       
+             <input type="number" name="cpf" id="cpf" placeholder="CPF" required>     
+             <label for="estado">Estado</label>   
+             <input type="text" name="estado" id="estado" placeholder="Estado" required>
+             <input class="botao-enviar" type="submit" name="" value="Enviar">       
+    
+            </form>
+
+            <p>Ao cadastrar-se, você concorda com a nossa <strong>Política de Privacidade</strong> e aceita receber comunicações do IESB.</p>
+
+        </div>
+    </main>
+</body>
+</html>
